@@ -20,5 +20,7 @@ RUN dotnet publish Merchant.Todont.Web/Merchant.Todont.Web.csproj \
 FROM mcr.microsoft.com/dotnet/runtime-deps:5.0-alpine AS final
 WORKDIR /app
 EXPOSE 80
-COPY --from=publish /app/publish .
+COPY --from=publish /app/publish 
+ENV Jwt__Key=/var/run/secrets/jwt_key.txt
+ENV ConnectionStrings__TodontContext=ConnectionStrings__TodontContext=Host=postgres;Port=5432;Database=todont;User=todont;Password=todont;
 ENTRYPOINT ["./Merchant.Todont.Web"]
