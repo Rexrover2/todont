@@ -40,7 +40,7 @@ namespace Merchant.Todont.Web
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = Configuration["Jwt:Issuer"],
                         ValidAudience = Configuration["Jwt:Issuer"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(File.ReadAllText("/run/secrets/jwt_key.txt")))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(File.ReadAllText(Configuration["Jwt:Key"])))
                     };
                 });
                 services
