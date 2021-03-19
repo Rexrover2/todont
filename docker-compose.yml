@@ -11,6 +11,8 @@ services:
       dockerfile: src/Merchant.Todos.Web/Dockerfile
     environment:
       - ConnectionStrings__TodontContext=Host=postgres;Port=5432;Database=todont;User=todont;Password=todont;
+    secrets:
+      - jwt_key.txt
     ports:
       - 5000
       - 5001

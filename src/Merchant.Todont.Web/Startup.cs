@@ -1,3 +1,4 @@
+using System.IO;
 using System.Text;
 using HotChocolate;
 using Merchant.Todont.Api;
@@ -38,8 +39,8 @@ namespace Merchant.Todont.Web
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = Configuration["Jwt:Issuer"],
-                        ValidAudience = Configuration["Jwt:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                        ValidAudience = Configuration["Jwt:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(File.ReadAllText("/run/secrets/jwt_key.txt")))
                     };
                 });
                 services

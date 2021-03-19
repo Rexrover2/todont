@@ -6,5 +6,5 @@ RUN npm ci
 COPY ./src/app/* ./
 RUN npx snowpack build
 FROM nginx:alpine
-COPY --from=build /app/build /var/www
+COPY --from=build /app/build /usr/share/nginx/html
 CMD ["nginx -g 'daemon off;'"]
