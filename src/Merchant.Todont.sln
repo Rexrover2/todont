@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Todont.Api", "Merchant.Todont.Api\Merchant.Todont.Api.csproj", "{DCEF5687-1E4A-451D-873A-418D8BE66665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Todont.Domain", "Merchant.Todont.Domain\Merchant.Todont.Domain.csproj", "{1082DAB6-44EE-41CC-B423-1093C4BD31DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Todont.Infrastructure", "Merchant.Todont.Infrastructure\Merchant.Todont.Infrastructure.csproj", "{6CFF76EC-D0CC-4026-9F86-4B1C6F035558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Todont.Enums", "Merchant.Todont.Enums\Merchant.Todont.Enums.csproj", "{607C7B59-7142-480A-B928-C14F7598D5A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Todont.Web", "Merchant.Todont.Web\Merchant.Todont.Web.csproj", "{CF421777-1497-4B46-99DE-119898A44957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchant.Todont.Tests", "Merchant.Todont.Tests\Merchant.Todont.Tests.csproj", "{7713C272-AC7B-4282-8279-772E265A8A9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCEF5687-1E4A-451D-873A-418D8BE66665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCEF5687-1E4A-451D-873A-418D8BE66665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCEF5687-1E4A-451D-873A-418D8BE66665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCEF5687-1E4A-451D-873A-418D8BE66665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1082DAB6-44EE-41CC-B423-1093C4BD31DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1082DAB6-44EE-41CC-B423-1093C4BD31DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1082DAB6-44EE-41CC-B423-1093C4BD31DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1082DAB6-44EE-41CC-B423-1093C4BD31DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CFF76EC-D0CC-4026-9F86-4B1C6F035558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CFF76EC-D0CC-4026-9F86-4B1C6F035558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CFF76EC-D0CC-4026-9F86-4B1C6F035558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CFF76EC-D0CC-4026-9F86-4B1C6F035558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607C7B59-7142-480A-B928-C14F7598D5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607C7B59-7142-480A-B928-C14F7598D5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607C7B59-7142-480A-B928-C14F7598D5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607C7B59-7142-480A-B928-C14F7598D5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF421777-1497-4B46-99DE-119898A44957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF421777-1497-4B46-99DE-119898A44957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF421777-1497-4B46-99DE-119898A44957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF421777-1497-4B46-99DE-119898A44957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7713C272-AC7B-4282-8279-772E265A8A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7713C272-AC7B-4282-8279-772E265A8A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7713C272-AC7B-4282-8279-772E265A8A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7713C272-AC7B-4282-8279-772E265A8A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
