@@ -6,7 +6,7 @@ namespace Merchant.Todont.Infrastructure.Data.Context
     {
         public DbSet<User> Users => Set<User>();
         public DbSet<Habit> Habits => Set<Habit>();
-        public DbSet<Entry> Entries => Set<Entry>();
+        public DbSet<HabitEntry> HabitEntries => Set<HabitEntry>();
         public TodontContext(DbContextOptions<TodontContext> options) : base(options) { }
     }
 }

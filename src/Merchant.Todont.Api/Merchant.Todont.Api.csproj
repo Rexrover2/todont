@@ -7,7 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="11.0.9" />
       <PackageReference Include="HotChocolate.Types" Version="11.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Merchant.Todont.Domain\Merchant.Todont.Domain.csproj" />
+      <ProjectReference Include="..\Merchant.Todont.Infrastructure\Merchant.Todont.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

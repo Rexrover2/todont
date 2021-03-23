@@ -2,11 +2,11 @@ using System.IO;
 using System.Text;
 using HotChocolate;
 using Merchant.Todont.Api;
+using Merchant.Todont.Domain;
 using Merchant.Todont.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +28,7 @@ namespace Merchant.Todont.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services
+                .AddDomain()
                 .AddInfrastructure(Configuration)
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
