@@ -1,16 +1,10 @@
 services:
-  app:
-    build:
-      context: .
-      dockerfile: src/app/Dockerfile
-    ports:
-     - 80:5002
   api:
     build:
       context: .
       dockerfile: src/Merchant.Todont.Web/Dockerfile
     environment:
-      - ConnectionStrings__TodontContext=Host=postgres;Port=5432;Database=todont;User=todont;Password=todont;
+      - ConnectionStrings__TodontContext=Host=postgres;Port=5432;Database=todont;Username=todont;Password=todont;
       - Jwt__Key=/run/secrets/jwt_key
     secrets:
       - jwt_key

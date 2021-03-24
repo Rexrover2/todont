@@ -1,0 +1,7 @@
+**/.vs/
+*/.idea/
+**/obj/
+**/bin/
+**/node_modules/
+jwt_key.txt
+*.DotSettings.user
