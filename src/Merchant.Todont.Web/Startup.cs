@@ -1,6 +1,7 @@
 using System.IO;
 using System.Text;
 using HotChocolate;
+using HotChocolate.Execution.Options;
 using Merchant.Todont.Api;
 using Merchant.Todont.Domain;
 using Merchant.Todont.Infrastructure;
@@ -28,6 +29,7 @@ namespace Merchant.Todont.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services
+                .AddLogging()
                 .AddDomain()
                 .AddInfrastructure(Configuration)
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -44,11 +46,15 @@ namespace Merchant.Todont.Web
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(File.ReadAllText(Configuration["Jwt:Key"])))
                     };
                 });
-                services
-                    .AddRouting()
-                    .AddGraphQLServer()
-                    .AddAuthorization()
-                    .ConfigureSchema(builder => builder.AddApi().Create());
+            
+            services
+                .AddRouting()
+                .AddAuthorization()
+                .AddGraphQLServer()
+                .ConfigureSchema(builder => builder.AddApi().Create().MakeExecutable(new RequestExecutorOptions
+                {
+                    IncludeExceptionDetails = true 
+                }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +66,9 @@ namespace Merchant.Todont.Web
             }
 
             app.UseAuthentication();
-            app.UseRouting();
+            app
+                .UseRouting()
+                .UseEndpoints(endpoints => endpoints.MapGraphQL());
         }
     }
 }

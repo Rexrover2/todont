@@ -12,9 +12,9 @@ namespace Merchant.Todont.Web
     {
         public static async Task Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
+            using var host = CreateHostBuilder(args).Build();
             await ApplyMigrations(host);
-            await host.StartAsync();
+            await host.RunAsync();
         }
 
         private static async Task ApplyMigrations(IHost host)

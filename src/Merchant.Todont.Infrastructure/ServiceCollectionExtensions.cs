@@ -15,7 +15,10 @@ namespace Merchant.Todont.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config) =>
             services
                 .AddSingleton<IIdentityContext, TestIdentityContext>()
-                .AddDbContext<TodontContext>(options => options.UseNpgsql(config.GetConnectionString("TodontContext")))
+                .AddDbContext<TodontContext>(options => 
+                    options.UseNpgsql(config.GetConnectionString("TodontContext"), 
+                    builder => builder.MigrationsAssembly("Merchant.Todont.Web")), 
+                    ServiceLifetime.Transient)
                 .AddScoped<IHabitQueries, HabitQueries>()
                 .AddScoped<IUserQueries, UserQueries>()
                 .AddTransient<IUsersRepository, UsersRepository>()

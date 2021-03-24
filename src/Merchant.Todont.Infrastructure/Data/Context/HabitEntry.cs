@@ -9,6 +9,6 @@ namespace Merchant.Todont.Infrastructure.Data.Context
         public Habit Habit { get; set; } = default!;
         public DateTimeOffset Created { get; set; }
         public string Notes { get; set; } = "";
-        public Domain.Habits.HabitEntry ToDomain() => new Domain.Habits.HabitEntry(Id, HabitId, Created, Notes);
+        public Domain.Habits.HabitEntry ToDomain() => new Domain.Habits.HabitEntry(Id, HabitId, Habit.UserId, Created, Notes);
     }
 }

@@ -26,11 +26,11 @@ namespace Merchant.Todont.Tests.Domain.Habits
                     Entries = new []
                     {
                         // 01 - 02 ( 2 days )
-                        new HabitEntry(Guid.NewGuid(), habitId, new DateTimeOffset(new DateTime(2021, 01, 03)), ""),
+                        new HabitEntry(Guid.NewGuid(), habitId, userId, new DateTimeOffset(new DateTime(2021, 01, 03)), ""),
                         // 03 - 04 ( 2 days )
-                        new HabitEntry(Guid.NewGuid(), habitId, new DateTimeOffset(new DateTime(2021, 01, 05)), ""),
+                        new HabitEntry(Guid.NewGuid(), habitId, userId, new DateTimeOffset(new DateTime(2021, 01, 05)), ""),
                         // 04 - 09 ( 5 days )
-                        new HabitEntry(Guid.NewGuid(), habitId, new DateTimeOffset(new DateTime(2021, 01, 10)), ""),
+                        new HabitEntry(Guid.NewGuid(), habitId, userId, new DateTimeOffset(new DateTime(2021, 01, 10)), ""),
                         // 11 - now 
                     }
                 }

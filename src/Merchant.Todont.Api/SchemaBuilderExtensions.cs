@@ -1,4 +1,5 @@
 using HotChocolate;
+using HotChocolate.Configuration;
 using Merchant.Todont.Api.Types;
 
 namespace Merchant.Todont.Api
