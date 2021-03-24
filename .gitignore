@@ -3,3 +3,4 @@
 obj/
 bin/
 jwt_key.txt
+*.DotSettings.user
